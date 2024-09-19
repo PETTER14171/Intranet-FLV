@@ -1,0 +1,305 @@
+:root{
+    --azulobscuro: #0036a9;
+    --azulclaro: #3886C9;   
+    --amarillo: #FFCE00;
+    --blanco: #ffff;
+    --negro: #0000;
+    --gris: #505050;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;    
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+/**Globales**/
+
+  body{
+    background-color: var(--blanco);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+a{
+    text-decoration: none;
+}
+
+/** Calendarios **/
+
+ol{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    padding: 5%;
+    text-align: right;
+}
+
+.day-name{
+    background-color: var(--azulclaro);
+    color: var(--blanco);
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.inicio-caldario1{grid-column-start: 1;}
+
+.inicio-caldario2{grid-column-start: 3;}
+
+.inicio-caldario3{grid-column-start: 6;}
+
+/**Header**/
+
+.header{
+    display: flex;
+    justify-content: center;
+}
+
+.header__logo{
+    margin: 3rem, 0;
+    width: 500px;
+    height: 100px;
+}
+
+/**Navegacion**/
+
+.navegacion{
+    background-color: var(--azulclaro);
+    font-weight: 700;
+    font-size: 2rem;
+    padding: .5rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+ }
+ 
+ .navegacion__enlace{
+    color: var(--blanco);
+}
+
+.navegacion__enlace--activo,
+.navegacion__enlace:hover{
+    color: var(--amarillo);
+}
+
+.video-banner {
+    display: grid; /* Usamos Grid para organizar los videos */
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    gap: 10px; /* Espacio entre los videos */
+    width: 100%;
+    overflow: hidden; /* Evita que los videos desborden el contenedor */
+}
+
+.video-banner__contenido {
+    width: 100%; /* Cada video ocupa todo el ancho de su celda */
+    height: auto; /* Mantiene la proporción del video */
+    display: block; /* Elimina los espacios blancos adicionales */
+    object-fit: cover; /* Cubre el contenedor sin cambiar la altura */
+}
+
+
+/**contenedor--medio Contenedor sombra**/
+
+.contenedor-medio{
+    background-color: var(--amarillo);
+    padding: 2rem 0;
+}
+
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.sombra{
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    background-color: var(--azulobscuro);
+    padding: 2rem;
+    border-radius: 2rem;
+    min-height: 65rem; /* Ajusta este valor según la altura que desees */
+    margin-bottom: 2rem; /* Añadir margen inferior para separarlo del siguiente contenido */
+}
+
+.titulos{
+    color: var(--blanco);
+    text-align: center;
+}
+
+ /**footer**/
+
+ .footer__texto{
+    text-align: center;
+    background-color: var(--azulclaro);
+    color: var(--blanco);
+    padding: 1rem 0;
+    font-size: 2rem;
+    margin: 0 auto;
+
+}
+
+/** Contenedores Inicio**/
+
+.Contenido-grid{
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+}
+
+.contenedor--medio{
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.contenedor--izquierda{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    line-height: .80;
+}
+
+.contenedor--izquierda p{
+    color: var(--gris);
+}
+
+.contenedor--derecha{
+    grid-column: 3/4;
+    grid-row: 1/2;
+    padding: 10%;
+}
+
+.contenedor--derecha h3{
+    margin: 0;
+    line-height: .10
+}
+
+.contenedor-medio h3{
+    color: var(--azulobscuro);
+    font-size: 1.9rem;
+    text-align: center;
+}
+
+.fecha__notas{
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+
+.img-tag_1 img {
+    max-width: 40%;
+    height: auto;
+    margin-left: 9.5rem;
+}
+
+.img-tag_2 img {
+    max-width: 27%;
+    height: auto;
+    margin-left: 11.5rem;
+}
+
+.img-tag_3 img {
+    max-width: 40%;
+    height: auto;
+    margin-left: 9.5rem;
+}
+
+/** Contenedores Nosotros Equipo**/
+.Contenido-grid_4{
+    display: grid;
+    grid-template-columns: 1fr 60fr 1fr;
+    padding: 1.5rem;
+    background-color: var(--amarillo);
+}
+
+.contenedor_4{
+    max-width: 200rem;
+    margin: 0 auto;
+}
+
+.sombra_4{
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    background-color: var(--azulobscuro);
+    padding: 2rem;
+    border-radius: 2rem;
+    min-height: 90rem; /* Ajusta este valor según la altura que desees */
+    margin-bottom: 2rem; /* Añadir margen inferior para separarlo del siguiente contenido */
+}
+
+.grid-nosotros{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    color: var(--blanco);
+    text-align: center;
+    gap: 4rem;
+}
+
+.grid-nosotros h2, h1{
+    color: var(--amarillo);
+    text-align: center;
+}
+
+.grid-nosotros img{
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.Integrante-1{grid-column: 1/2; grid-row: 1/2;}
+.Integrante-2{grid-column: 2/3; grid-row: 1/2;}
+.Integrante-3{grid-column: 3/4; grid-row: 1/2;}
+.Integrante-4{grid-column: 4/5; grid-row: 1/2;}
+.Integrante-5{grid-column: 1/2; grid-row: 2/3;}
+.Integrante-6{grid-column: 2/3; grid-row: 2/3;}
+.Integrante-7{grid-column: 3/4; grid-row: 2/3;}
+
+.info_personal {
+    list-style: none;
+    margin-left: 7rem;
+    font-weight: bold;
+    padding: 0;
+}
+
+.info_personal li {
+    display: flex;
+    justify-content: left;
+    margin-bottom: 0.5rem; 
+    text-align: left; 
+}
+
+.info_personal span {
+    color: var(--amarillo);
+    margin-left: auto; /** Empuja el span al final (derecha) **/
+    margin-right: 10rem;
+    text-align: right; /** Alinea el texto dentro del span a la derecha **/
+}
+
+/** Contenedores Comercial**/
+.Contenido-grid_2{
+    display: grid;
+    grid-template-columns: 1fr 60fr 1fr;
+    padding: 1.5rem;
+    background-color: var(--amarillo);
+}
+
+.contenedor_2{
+    max-width: 200rem;
+    margin: 0 auto;
+}
+
+.contenedor_2 h1{
+    color: var(--blanco);
+}
+
+.sombra_2{
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    background-color: var(--azulobscuro);
+    padding: 2rem;
+    border-radius: 2rem;
+    min-height: 90rem; /* Ajusta este valor según la altura que desees */
+    margin-bottom: 2rem; /* Añadir margen inferior para separarlo del siguiente contenido */
+}
